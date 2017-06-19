@@ -14,9 +14,13 @@ def poissonLikDist(a,b):
     #MLE expectation of a and b assuming they are drawn from the same distribution
     Ea  = (a+b)*asum/(asum+bsum)
     Eb  = Ea*bsum/asum
+    #expectation based on Poisson approximation
+    if np.any(Ea==0):
+        Ea[Ea==0] =  -np.log(np.mean(a==0))
     if np.any(a==0):
-        #expectation based on Poisson approximation
         a[a==0] =  -np.log(np.mean(a==0))
+    if np.any(Eb==0):
+        Eb[Eb==0] =  -np.log(np.mean(b==0))
     if np.any(b==0):
         b[b==0] =  -np.log(np.mean(b==0))
 
@@ -38,9 +42,11 @@ def poissonLikDistmv(a,b):
     if np.any(a==0):
         zeroexp =  -np.log(np.mean(a==0, axis=1))
         a[:,np.isfinite(zeroexp)] = a[:,np.isfinite(zeroexp)] + zeroexp[np.isfinite(zeroexp)]
+        Ea[:,np.isfinite(zeroexp)] = Ea[:,np.isfinite(zeroexp)] + zeroexp[np.isfinite(zeroexp)]
     if np.any(b==0):
         zeroexp =  -np.log(np.mean(b==0, axis=1))
         b[:,np.isfinite(zeroexp)] = b[:,np.isfinite(zeroexp)] + zeroexp[np.isfinite(zeroexp)]
+        Eb[:,np.isfinite(zeroexp)] = Eb[:,np.isfinite(zeroexp)] + zeroexp[np.isfinite(zeroexp)]
 
     logp_unnormalized_adist  = -a + Ea + a*(np.log(a)-np.log(Ea))
     logp_unnormalized_bdist  = -b + Eb + b*(np.log(b)-np.log(Eb))
