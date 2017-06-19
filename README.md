@@ -3,7 +3,7 @@ This repository collects my mini-scripts which usually address some mini problem
 
 
 ### order.tsp.R: 
-Heatmap ordering is usually done with hierarchical clustering. Hierarchical clustering are not designed to give an optimal ordering so it is often tricky to get a good visualization. This script find an 'optimal' order the by minimizing the sum of distances between neighbors in the heatmap. This problem is equivalent to a Hamiltonian path problem which reduce to a special case of traveling salseman problem. So this script calls a binary of a TSP solver Concorde to find the ordering. It is usually very fast and give good vis for me. It is especially suitable for data with sequential structure. 
+Heatmap ordering is usually done with hierarchical clustering. Hierarchical clustering is not designed to give an optimal ordering so it is often tricky to get a good visualization. This script find an 'optimal' order the by minimizing the sum of distances between neighbors in the heatmap. This problem is equivalent to a Hamiltonian path problem which reduce to a special case of traveling salseman problem. So this script calls a binary of a TSP solver Concorde to find the ordering. It is usually very fast and give good vis for me. It is especially suitable for data with sequential structure. 
 
 
 ### poissonLikDist.py: 
