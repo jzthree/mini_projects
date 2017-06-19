@@ -7,4 +7,4 @@ Heatmap ordering is usually done with hierarchical clustering. Hierarchical clus
 
 
 ### poissonLikDist.py: 
-many distance metric I previously knew are not particularly good for count data that are not normalized, especially when the count number is low. Specifically RNA-seq with low depth is the scenario that I use this for. Distance metic should indicate the uncertainty of the data so lower counts should generally result in higher distances and this is an attempt.
+Most distance functions are not particularly designed for count data that are not normalized (the sum of each sample varies but we only care about proportions). Distance metic should indicate the uncertainty of the data so lower counts should generally result in higher distances and this is an attempt. Specifically RNA-seq with low depth is the scenario that I use this for.
