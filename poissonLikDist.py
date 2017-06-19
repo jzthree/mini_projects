@@ -1,8 +1,8 @@
 import numpy as np
 
 #Measuring Poisson likelihood ratio distance between two normalized count vectors
-#In contrary to normal Euclidean distances, this measure considers uncertainty 
-#of measurements so lower counts gives higher distances
+#In contrast to normal Euclidean distances, this measure considers uncertainty 
+#of measurements so lower counts generally gives higher distances
 #Note: this is not a metric (doesn't satisfy triangle inequality)
 
 
