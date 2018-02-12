@@ -12,4 +12,4 @@ Most distance functions are not particularly designed for count data that are no
 
 ### weighted.cortest.R:
 
-Weighted correlation is quite commonly used, however, I have not found an implementation that calculate significance for the weighted correlation in the case that the weights are known and fixed (i.e. not drawn from a distribution) (note this is different from the weights R package). The trick is simply replacing sample size with the effective sample size derived from the weights.
+Sometime it is useful to weight samples differently when computing correlation, but surprisingly I have not found an implementation that calculate significance for the weighted correlation in the case that the weights are known and fixed (i.e. not drawn from a distribution) (note this is different from the weights R package). The trick is simply replacing sample size with the effective sample size derived from the weights.
