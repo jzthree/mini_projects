@@ -8,3 +8,8 @@ Heatmap ordering is usually done with hierarchical clustering. Hierarchical clus
 
 ### poissonLikDist.py: 
 Most distance functions are not particularly designed for count data that are not normalized (the sum of each sample varies but we only care about proportions). Distance metic should indicate the uncertainty of the data so lower counts should generally result in higher distances and this is an attempt. Specifically RNA-seq with low depth is the scenario that I use this for.
+
+
+### weighted.cortest.R:
+
+Weighted correlation is quite commonly used, however, I have not found an implementation that calculate significance for the weighted correlation in the case that the weights are known and fixed (i.e. not drawn from a distribution) (note this is different from the weights R package). The trick is simply replacing sample size with the effective sample size derived from the weights.
