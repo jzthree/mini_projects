@@ -1,5 +1,5 @@
-# scripts
-This repository collects my mini-scripts which usually address some mini problems I don't know of an existing satisfying solution for. These are mostly experimenta. Any contribution / discussion is very welcomed (if anybody is reading this haha).
+# Mini-project scripts
+This repository collects my scripts each addresses a mini problem for which I don't know any pre-existing satisfying solution. These are all experimental so use at your own risk. Any contribution / discussion is very welcomed (if anybody is reading this haha).
 
 
 ### order.tsp.R: 
