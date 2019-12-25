@@ -13,7 +13,6 @@ ndea <- function(x, y, gene_indices_x, gene_indices_y, network, threshold=0,
                  as.numeric(network[gene_indices_x,i]),
                  as.numeric(network[gene_indices_y,i]), alternative=alternative), 
     mc.cores=mc.cores))
-  names(results) <- c('t.value','p.value')
   return(results)
 }
 
