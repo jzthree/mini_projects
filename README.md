@@ -1,5 +1,5 @@
 # Mini-project scripts
-This repository collects my scripts each addresses a mini problem for which I don't know any pre-existing satisfying solution. These are all experimental so use at your own risk. Any contribution / discussion is very welcomed.
+This repository collects my scripts each addresses a mini problem for which I don't know any pre-existing satisfying solution. All of these are tested but some are very experimental so use at your own risk. Any contribution / discussion is very welcomed.
 
 ### ndea.R:
 This implements a two sample weighted t-test where weighted averages rather than averages are compared. Weighted t-tests are widely considered before but it is worth noting that they generally consider the case where weights indicate equivalent sample sizes or consider weights as random variables. Here each weight is considered a fixed, *non-random*, property tied to each sample. When the weights are derived from a network (such as using network connectivity to a gene or gene set of interest) we call it NDEA (Network differential enrichment analysis).
