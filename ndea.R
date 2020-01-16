@@ -43,7 +43,7 @@ weighted.t <- function(x,y,weightx,weighty,alternative='greater'){
     my <- wtd.mean(y[validindy], weighty[validindy], na.rm = TRUE)
     vy <- wtd.var(y[validindy], weighty[validindy], na.rm = TRUE)
     effective_N1 = (sum(weightx[validindx],na.rm=T)^2) /sum(weightx[validindx]^2 ,na.rm=T)
-    effective_N2 = (sum(weighty[validindx],na.rm=T)^2) /sum(weighty[validindy]^2 ,na.rm=T)
+    effective_N2 = (sum(weighty[validindy],na.rm=T)^2) /sum(weighty[validindy]^2 ,na.rm=T)
     sxy <- sqrt((vx/effective_N1) + (vy/effective_N2))
     df = (((vx/effective_N1) + (vy/effective_N2))^2)/((((vx/effective_N1)^2)/(effective_N1 - 1)) +
                                                         ((vy/effective_N2)^2/(effective_N2 - 1)))
